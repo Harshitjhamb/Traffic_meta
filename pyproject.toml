@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "traffic-env"
+version = "1.0.0"
+description = "Smart traffic signal optimization environment"
+requires-python = ">=3.10"
+dependencies = [
+    "fastapi",
+    "uvicorn",
+    "pydantic",
+    "numpy",
+]
+
+[tool.openenv]
+name = "traffic-env"
+entry_point = "api.py"
+tasks = ["easy", "medium", "hard"]
