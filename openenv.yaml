@@ -1,6 +1,11 @@
 name: traffic-env
-description: Smart traffic optimization environment
+description: Smart traffic signal optimization environment
+version: "1.0"
+entry_point: api.py
 tasks:
-  - easy
-  - medium
-  - hard
+  - name: easy
+    description: 2-lane traffic optimization
+  - name: medium
+    description: 3-lane traffic optimization
+  - name: hard
+    description: 4-lane traffic optimization
