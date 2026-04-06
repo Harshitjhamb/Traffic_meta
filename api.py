@@ -9,7 +9,7 @@ env = TrafficEnv()
 def home():
     return {"message": "Traffic OpenEnv API running"}
 
-@app.post("/openenv/reset")
+@app.post("/reset")
 def reset():
     global env
     env = TrafficEnv()
@@ -21,7 +21,7 @@ def reset():
         "info": {}
     }
 
-@app.post("/openenv/step")
+@app.post("/step")
 def step(action: Action = Body(...)):
     result = env.step(action)
     return {
@@ -31,7 +31,7 @@ def step(action: Action = Body(...)):
         "info": result.info
     }
 
-@app.get("/openenv/validate")
+@app.get("/validate")
 def validate():
     return {
         "name": "traffic-env",
