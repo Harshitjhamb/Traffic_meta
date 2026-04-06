@@ -26,13 +26,13 @@ def reset():
 from fastapi import Body
 @app.post("/openenv/step")
 def step(action: Action = Body(...)):
-    env.step(action)
+    env.step(action)  # assumes Action has signal
 
     return {
         "observation": {
             "lanes": env.lanes
         },
-        "reward": 1.0,  # or your logic
+        "reward": float(sum(env.lanes)),  # better than constant
         "done": False,
         "info": {}
     }
