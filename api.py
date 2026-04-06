@@ -5,6 +5,10 @@ from models import Action
 app = FastAPI()
 env = TrafficEnv()
 
+@app.get("/")
+def home():
+    return {"message": "Traffic API running"}
+
 @app.post("/reset")
 def reset():
     global env
