@@ -1,0 +1,6 @@
+name: traffic-env
+description: Smart traffic optimization environment
+tasks:
+  - easy
+  - medium
+  - hard
