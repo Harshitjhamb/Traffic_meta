@@ -9,13 +9,13 @@ env = TrafficEnv()
 def home():
     return {"message": "Traffic API running"}
 
-@app.post("/reset")
+@app.post("/openenv/reset")
 def reset():
     global env
     env = TrafficEnv()
     return {"lanes": env.lanes}
 
-@app.post("/step")
+@app.post("/openenv/step")
 def step():
     env.step(Action(signal=0))
     return {
