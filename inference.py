@@ -3,6 +3,7 @@ import os
 import textwrap
 from typing import List, Optional
 from openai import OpenAI
+from api import app
 from env import MyEnvV4Action, MyEnvV4Env
 IMAGE_NAME = os.getenv("IMAGE_NAME") 
 API_KEY = os.getenv("HF_TOKEN") or os.getenv("API_KEY")
