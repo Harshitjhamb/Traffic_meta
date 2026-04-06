@@ -1,0 +1,6 @@
+fastapi
+uvicorn
+gradio
+matplotlib
+imageio
+numpy
