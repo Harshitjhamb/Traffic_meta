@@ -12,7 +12,11 @@ dependencies = [
     "uvicorn",
     "pydantic",
     "numpy",
+    "openenv-core>=0.2.0",
 ]
+
+[project.scripts]
+server = "api:app"
 
 [tool.openenv]
 name = "traffic-env"
