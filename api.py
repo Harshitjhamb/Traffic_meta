@@ -13,12 +13,26 @@ def home():
 def reset():
     global env
     env = TrafficEnv()
-    return {"lanes": env.lanes}
 
-@app.post("/openenv/step")
-def step():
-    env.step(Action(signal=0))
     return {
-        "lanes": env.lanes,
-        "total_cars": sum(env.lanes)
+        "observation": {
+            "lanes": env.lanes
+        },
+        "reward": 0.0,
+        "done": False,
+        "info": {}
+    }
+    
+from fastapi import Body
+@app.post("/openenv/step")
+def step(action: Action = Body(...)):
+    env.step(action)
+
+    return {
+        "observation": {
+            "lanes": env.lanes
+        },
+        "reward": 1.0,  # or your logic
+        "done": False,
+        "info": {}
     }
