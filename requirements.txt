@@ -1,6 +1,8 @@
 fastapi
 uvicorn
-gradio
+pydantic
+numpy
 matplotlib
 imageio
-numpy
+openai
+gradio
