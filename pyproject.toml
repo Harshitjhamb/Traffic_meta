@@ -12,6 +12,10 @@ dependencies = [
     "uvicorn",
     "pydantic",
     "numpy",
+    "matplotlib",
+    "imageio",
+    "openai",
+    "gradio",
     "openenv-core>=0.2.0",
 ]
 
