@@ -1,7 +1,7 @@
 import subprocess
 import sys
 
-subprocess.check_call([sys.executable, "-m", "pip", "install", "openai", "-q"])
+subprocess.check_call([sys.executable, "-m", "pip", "install", "openai", "requests", "-q"])
 
 import asyncio
 import os
